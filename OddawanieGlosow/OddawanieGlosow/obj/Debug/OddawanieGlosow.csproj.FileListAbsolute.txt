@@ -1,0 +1,33 @@
+C:\Users\Jakub\source\repos\OddawanieGlosow\OddawanieGlosow\obj\Debug\OddawanieGlosow.csprojResolveAssemblyReference.cache
+C:\Users\Jakub\source\repos\OddawanieGlosow\OddawanieGlosow\obj\Debug\OddawanieGlosow.csproj.CoreCompileInputs.cache
+C:\Users\Jakub\source\repos\OddawanieGlosow\OddawanieGlosow\bin\OddawanieGlosow.dll.config
+C:\Users\Jakub\source\repos\OddawanieGlosow\OddawanieGlosow\bin\OddawanieGlosow.dll
+C:\Users\Jakub\source\repos\OddawanieGlosow\OddawanieGlosow\bin\OddawanieGlosow.pdb
+C:\Users\Jakub\source\repos\OddawanieGlosow\OddawanieGlosow\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Jakub\source\repos\OddawanieGlosow\OddawanieGlosow\bin\Newtonsoft.Json.dll
+C:\Users\Jakub\source\repos\OddawanieGlosow\OddawanieGlosow\bin\System.Net.Http.Formatting.dll
+C:\Users\Jakub\source\repos\OddawanieGlosow\OddawanieGlosow\bin\System.Web.Http.dll
+C:\Users\Jakub\source\repos\OddawanieGlosow\OddawanieGlosow\bin\System.Web.Http.WebHost.dll
+C:\Users\Jakub\source\repos\OddawanieGlosow\OddawanieGlosow\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Jakub\source\repos\OddawanieGlosow\OddawanieGlosow\bin\Newtonsoft.Json.xml
+C:\Users\Jakub\source\repos\OddawanieGlosow\OddawanieGlosow\bin\System.Net.Http.Formatting.xml
+C:\Users\Jakub\source\repos\OddawanieGlosow\OddawanieGlosow\bin\System.Web.Http.xml
+C:\Users\Jakub\source\repos\OddawanieGlosow\OddawanieGlosow\bin\System.Web.Http.WebHost.xml
+C:\Users\Jakub\source\repos\OddawanieGlosow\OddawanieGlosow\obj\Debug\OddawanieGlosow.dll
+C:\Users\Jakub\source\repos\OddawanieGlosow\OddawanieGlosow\obj\Debug\OddawanieGlosow.pdb
+C:\Users\Mateusz\Source\Repos\Inżynieria Oprogramowania\OddawanieGlosow\OddawanieGlosow\bin\OddawanieGlosow.dll.config
+C:\Users\Mateusz\Source\Repos\Inżynieria Oprogramowania\OddawanieGlosow\OddawanieGlosow\bin\OddawanieGlosow.dll
+C:\Users\Mateusz\Source\Repos\Inżynieria Oprogramowania\OddawanieGlosow\OddawanieGlosow\bin\OddawanieGlosow.pdb
+C:\Users\Mateusz\Source\Repos\Inżynieria Oprogramowania\OddawanieGlosow\OddawanieGlosow\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Mateusz\Source\Repos\Inżynieria Oprogramowania\OddawanieGlosow\OddawanieGlosow\bin\Newtonsoft.Json.dll
+C:\Users\Mateusz\Source\Repos\Inżynieria Oprogramowania\OddawanieGlosow\OddawanieGlosow\bin\System.Net.Http.Formatting.dll
+C:\Users\Mateusz\Source\Repos\Inżynieria Oprogramowania\OddawanieGlosow\OddawanieGlosow\bin\System.Web.Http.dll
+C:\Users\Mateusz\Source\Repos\Inżynieria Oprogramowania\OddawanieGlosow\OddawanieGlosow\bin\System.Web.Http.WebHost.dll
+C:\Users\Mateusz\Source\Repos\Inżynieria Oprogramowania\OddawanieGlosow\OddawanieGlosow\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Mateusz\Source\Repos\Inżynieria Oprogramowania\OddawanieGlosow\OddawanieGlosow\bin\Newtonsoft.Json.xml
+C:\Users\Mateusz\Source\Repos\Inżynieria Oprogramowania\OddawanieGlosow\OddawanieGlosow\bin\System.Net.Http.Formatting.xml
+C:\Users\Mateusz\Source\Repos\Inżynieria Oprogramowania\OddawanieGlosow\OddawanieGlosow\bin\System.Web.Http.xml
+C:\Users\Mateusz\Source\Repos\Inżynieria Oprogramowania\OddawanieGlosow\OddawanieGlosow\bin\System.Web.Http.WebHost.xml
+C:\Users\Mateusz\Source\Repos\Inżynieria Oprogramowania\OddawanieGlosow\OddawanieGlosow\obj\Debug\OddawanieGlosow.csprojResolveAssemblyReference.cache
+C:\Users\Mateusz\Source\Repos\Inżynieria Oprogramowania\OddawanieGlosow\OddawanieGlosow\obj\Debug\OddawanieGlosow.dll
+C:\Users\Mateusz\Source\Repos\Inżynieria Oprogramowania\OddawanieGlosow\OddawanieGlosow\obj\Debug\OddawanieGlosow.pdb

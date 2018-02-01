@@ -22,7 +22,7 @@
     function onLoadFunctions() {
         var json = "{ \"PollId\": 1 }";
         var request = new XMLHttpRequest();
-        request.open("GET", "http://localhost:30718/api/user", true);
+        request.open("GET", "http://localhost:30718/api/user?pollId=1", true);
         request.setRequestHeader("Content-type", "application/json");
         request.send(json);
         request.onreadystatechange = processRequest;

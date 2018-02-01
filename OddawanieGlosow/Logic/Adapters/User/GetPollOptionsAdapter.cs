@@ -15,11 +15,11 @@ namespace OddawanieGlosow.Logic.Adapters.User
             _voteQueries = new VoteQueries();
         }
 
-        public GetPollOptionsResponseDto GetPollOptions(GetPollOptionsRequestDto request)
+        public GetPollOptionsResponseDto GetPollOptions(int pollId)
         {
-            var polloptions = _voteQueries.GetPollOptions(request.PollId);
+            var polloptions = _voteQueries.GetPollOptions(pollId);
 
-            var poll = _voteQueries.GetPollById(request.PollId);
+            var poll = _voteQueries.GetPollById(pollId);
             
             return new GetPollOptionsResponseDto
             {

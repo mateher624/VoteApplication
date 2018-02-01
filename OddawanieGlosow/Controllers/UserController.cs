@@ -18,14 +18,14 @@ namespace OddawanieGlosow.Controllers
 
 
         [HttpGet]
-        [Route("get-poll-options")]
-        public GetPollOptionsResponseDto GetPollOptions(GetPollOptionsRequestDto request)
+        //[Route("get-poll-options")]
+        public GetPollOptionsResponseDto GetPollOptions(int pollId)
         {
-            return _getPollOptionsAdapter.GetPollOptions(request);
+            return _getPollOptionsAdapter.GetPollOptions(pollId);
         }
 
         [HttpPost]
-        [Route("vote")]
+        //[Route("vote")]
         public void Vote(VoteRequestDto request)
         {
             _voteAdapter.Vote(request);

@@ -4,7 +4,19 @@
 
 <script type="text/javascript" language="javascript">
     function UserAction() {
-        document.getElementById("response").innerHTML = "<br>Test";
+        var options = document.getElementsByName('option');
+        var rateValue = 0;
+        for(var i = 0; i < options.length; i++){
+            if(options[i].checked){
+                rateValue = options[i].value;
+            }
+        }
+        var json = "{ \"Pesel\": \"54052010665\", \"PollOptionNumber\": " + rateValue + ", \"PollId\": 1 }";
+        var request = new XMLHttpRequest();
+        request.open("POST", "http://localhost:30718/api/user", true);
+        request.setRequestHeader("Content-type", "application/json");
+        request.send(json);
+        // go to other page
     }
 
     function onLoadFunctions() {

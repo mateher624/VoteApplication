@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Dapper;
 using OddawanieGlosow.Models.Entities;
 
 namespace OddawanieGlosow.Logic.Queries
@@ -18,6 +19,9 @@ namespace OddawanieGlosow.Logic.Queries
             using (var connection = _connectionFactory.OpenConnection())
             {
                 //todo tu robimy co chcemy, using sam zamyka connection
+                var dupa = connection.Query<Poll>(GetPollQuery, new { id = 1 });
+
+
             }
 
             throw new NotImplementedException();
@@ -37,5 +41,7 @@ namespace OddawanieGlosow.Logic.Queries
         {
             throw new NotImplementedException();
         }
+
+        private const string GetPollQuery = @"SELECT * FROM Poll";
     }
 }

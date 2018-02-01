@@ -1,9 +1,10 @@
 ﻿using System.Web.Http;
-using OddawanieGlosow.Logic.Adapters;
+using OddawanieGlosow.Logic.Adapters.Staff;
 using OddawanieGlosow.Models.Dto.Staff;
 
 namespace OddawanieGlosow.Controllers
 {
+    [RoutePrefix("api/staff")]
     public class StaffController : ApiController
     {
         private readonly RegisterEntryAdapter _registerEntryAdapter;

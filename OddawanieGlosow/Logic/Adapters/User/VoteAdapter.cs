@@ -16,14 +16,16 @@ namespace OddawanieGlosow.Logic.Adapters.User
             _usersPresenceQueries = new UsersPresenceQueries();
         }
 
-        public void Vote(VoteRequestDto request)
+        public VoteResponseDto Vote(VoteRequestDto request)
         {
             var hasAlreadyParticipated = _usersPresenceQueries.HasUserAlreadyParticipated(request.Pesel, request.PollId);
 
             if (hasAlreadyParticipated)
-                throw new InvalidOperationException();
+                return new VoteResponseDto { StatusCode = 500 };
 
+            _usersPresenceQueries.RegisterPresence(request.Pesel, request.PollId);
             _voteModule.Vote(request.PollOptionNumber, request.PollId);
+            return new VoteResponseDto { StatusCode = 200 };
         }
     }
 }

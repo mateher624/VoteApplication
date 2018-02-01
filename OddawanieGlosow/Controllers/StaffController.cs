@@ -1,6 +1,7 @@
 ﻿using System.Web.Http;
 using OddawanieGlosow.Logic.Adapters.Staff;
 using OddawanieGlosow.Models.Dto.Staff;
+using OddawanieGlosow.Models.Dto.User;
 
 namespace OddawanieGlosow.Controllers
 {
@@ -16,9 +17,9 @@ namespace OddawanieGlosow.Controllers
 
         [HttpPost]
         [Route("register-entry")]
-        public void RegisterEntry(RegisterEntryRequestDto request)
+        public VoteResponseDto RegisterEntry(RegisterEntryRequestDto request)
         {
-            _registerEntryAdapter.RegisterEntry(request);
+            return _registerEntryAdapter.RegisterEntry(request);
         }
     }
 }

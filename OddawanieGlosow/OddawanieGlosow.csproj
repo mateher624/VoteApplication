@@ -85,6 +85,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="FrontEnd\DeniedVote.html" />
+    <Content Include="FrontEnd\SuccessVote.html" />
     <Content Include="FrontEnd\VoteForm.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
@@ -108,6 +110,7 @@
     <Compile Include="Logic\Adapters\User\GetPollOptionsAdapter.cs" />
     <Compile Include="Logic\Adapters\Staff\RegisterEntryAdapter.cs" />
     <Compile Include="Logic\Adapters\User\VoteAdapter.cs" />
+    <Compile Include="Models\Dto\User\VoteResponseDto.cs" />
     <Compile Include="Logic\Mappers\PollOptionDtoMapper.cs" />
     <Compile Include="Logic\Modules\VoteModule.cs" />
     <Compile Include="Logic\Queries\ConnectionFactory.cs" />

@@ -3,20 +3,33 @@
 <!DOCTYPE html>
 
 <script type="text/javascript" language="javascript">
+
     function UserAction() {
         var options = document.getElementsByName('option');
         var rateValue = 0;
-        for(var i = 0; i < options.length; i++){
-            if(options[i].checked){
+        for (var i = 0; i < options.length; i++) {
+            if (options[i].checked) {
                 rateValue = options[i].value;
             }
         }
-        var json = "{ \"Pesel\": \"54052010665\", \"PollOptionNumber\": " + rateValue + ", \"PollId\": 1 }";
+        //var peselValue = document.getElementById("pesel").value;
+        var json = "{ \"Pesel\": \"2324456315\", \"PollOptionNumber\": " + rateValue + ", \"PollId\": 1 }";
         var request = new XMLHttpRequest();
-        request.open("POST", "http://localhost:30718/api/user", true);
+        request.open("POST", "http://localhost:30718/api/user/vote", true);
         request.setRequestHeader("Content-type", "application/json");
+        request.onreadystatechange = function () {
+            if (request.readyState == 4 && request.status == 200) {
+                //document.getElementById("header").innerHTML = "OK";
+                var response = JSON.parse(request.responseText);
+                if (response.StatusCode == 200) {
+                    window.location.href = "SuccessVote.html";
+                } else {
+                    window.location.href = "DeniedVote.html";
+                }
+            }
+        }
         request.send(json);
-        // go to other page
+        
     }
 
     function onLoadFunctions() {
@@ -31,13 +44,16 @@
             if (request.readyState == 4) {
                 var pollChoices = JSON.parse(request.responseText);
                 //document.getElementById("response").innerHTML = request.statusText + ":" + request.status + "<br>" + request.responseText;
-
-                var html = "<form>";
+                var headerHtml = "<h1>" + pollChoices.Name + "</h1>";
+                var descriptionHtml = "<h4>" + pollChoices.Description + "</h4>";
+                var listHtml = "<form>";
                 for (var key in pollChoices.PollOptions) {
-                    html += "<input type=\"radio\" name=\"option\" value=\"" + pollChoices.PollOptions[key].PollOptionNumber + "\">" + pollChoices.PollOptions[key].Name + "<br>";
+                    listHtml += "<input type=\"radio\" name=\"option\" value=\"" + pollChoices.PollOptions[key].PollOptionNumber + "\">" + pollChoices.PollOptions[key].Name + "<br>";
                 }
-                html += "</form>";
-                document.getElementById("response").innerHTML = html;
+                listHtml += "</form>";
+                document.getElementById("header").innerHTML = headerHtml;
+                document.getElementById("description").innerHTML = descriptionHtml;
+                document.getElementById("list").innerHTML = listHtml;
             }
         }
     }
@@ -49,20 +65,18 @@
     <title></title>
 </head>
 <body>
-    <%--<form>
-        <input type="radio" name="option" value="male">
-        Male<br>
-        <input type="radio" name="option" value="female">
-        Female<br>
-        <input type="radio" name="option" value="other">
-        Other
-    </form>--%>
     <form id="form1" runat="server">
         <div>
         </div>
         <div>
-            <div id="response"></div>
-            <br /><button type="submit" onclick="UserAction()">Vote</button>
+            <div id="header"></div>
+            <br />
+            <div id="description"></div>
+            <br />
+            <div id="list"></div>
+            <br />
+            <button type="submit" onclick="UserAction()">Zagłosuj</button>
+            <br />
         </div>
     </form>
 </body>

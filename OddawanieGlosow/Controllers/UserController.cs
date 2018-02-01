@@ -25,10 +25,10 @@ namespace OddawanieGlosow.Controllers
         }
 
         [HttpPost]
-        //[Route("vote")]
-        public void Vote(VoteRequestDto request)
+        [Route("vote")]
+        public VoteResponseDto Vote(VoteRequestDto request)
         {
-            _voteAdapter.Vote(request);
+            return _voteAdapter.Vote(request);
         }
     }
 }

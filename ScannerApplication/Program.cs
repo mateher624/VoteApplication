@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
 using System.Diagnostics;
+using ScannerApplication.Dto;
 
 namespace ScannerApplication
 {
@@ -14,9 +15,8 @@ namespace ScannerApplication
         {
             var th = new Thread(SendScanRequests);
             th.Start();
-            RegisterEntryApiRequest apiRq = new RegisterEntryApiRequest();
-            RegisterEntryRequestDto dto = new RegisterEntryRequestDto();
-            dto.PollId = 1;
+            var apiRq = new RegisterEntryApiRequest();
+            var dto = new RegisterEntryRequestDto {PollId = 1};
             while (true)
             {
                 Console.WriteLine("Podaj pesel lub zostaw puste aby wyjść: ");
@@ -36,19 +36,16 @@ namespace ScannerApplication
 
         static void SendScanRequests()
         {
-            ScanAndVoteApiRequest scanAndVoteApiReqest = new ScanAndVoteApiRequest();
-            CreateVoteFromScanRequestDto dto = new CreateVoteFromScanRequestDto();
+            var scanAndVoteApiReqest = new ScanAndVoteApiRequest();
+            var dto = new CreateVoteFromScanRequestDto();
             var sw = Stopwatch.StartNew();
             while (true)
             {
-                if (sw.ElapsedMilliseconds > 5000)
-                {
-                    sw.Restart();
-                    dto.PollId = 1;
-                    dto.PollOptionNumber = 1;
-
-                    scanAndVoteApiReqest.SendRequest(dto);
-                }
+                if (sw.ElapsedMilliseconds <= 30000) continue;
+                sw.Restart();
+                dto.PollId = 1;
+                dto.PollOptionNumber = 1;
+                scanAndVoteApiReqest.SendRequest(dto);
             }
         }
     }

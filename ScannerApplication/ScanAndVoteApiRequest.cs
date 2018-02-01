@@ -4,23 +4,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using RestSharp;
+using ScannerApplication.Dto;
 
 namespace ScannerApplication
 {
     class ScanAndVoteApiRequest
     {
-        RestClient client;
+        private readonly RestClient _client;
 
         public ScanAndVoteApiRequest()
         {
-            client = new RestClient("http://localhost:30718/api/scanner/scan-and-vote");
+            _client = new RestClient("http://localhost:30718/api/scanner/scan-and-vote");
         }
 
         public void SendRequest(CreateVoteFromScanRequestDto reqDto)
         {
             var request = new RestRequest(Method.POST);
             request.AddJsonBody(reqDto);
-            client.ExecuteAsync(request, response => { });
+            _client.ExecuteAsync(request, response => { });
         }
     }
 }

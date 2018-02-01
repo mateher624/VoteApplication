@@ -104,10 +104,17 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Logic\Adapters\RegisterEntryAdapter.cs" />
-    <Compile Include="Logic\Queries\StaffQueries.cs" />
+    <Compile Include="Logic\Adapters\Scanner\CreateVoteFromScanAdapter.cs" />
+    <Compile Include="Logic\Adapters\User\GetPollOptionsAdapter.cs" />
+    <Compile Include="Logic\Adapters\Staff\RegisterEntryAdapter.cs" />
+    <Compile Include="Logic\Adapters\User\VoteAdapter.cs" />
+    <Compile Include="Logic\Mappers\PollOptionDtoMapper.cs" />
+    <Compile Include="Logic\Modules\VoteModule.cs" />
+    <Compile Include="Logic\Queries\ConnectionFactory.cs" />
+    <Compile Include="Logic\Queries\UsersPresenceQueries.cs" />
+    <Compile Include="Logic\Queries\VoteQueries.cs" />
     <Compile Include="Models\Actor.cs" />
-    <Compile Include="Models\Dto\Scanner\ScanAndVoteRequestDto.cs" />
+    <Compile Include="Models\Dto\Scanner\CreateVoteFromScanRequestDto.cs" />
     <Compile Include="Models\Dto\Staff\RegisterEntryRequestDto.cs" />
     <Compile Include="Models\Dto\User\GetPollOptionsResponseDto.cs" />
     <Compile Include="Models\Dto\User\GetPollOptionsRequestDto.cs" />
@@ -133,7 +140,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Logic\Mappers\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

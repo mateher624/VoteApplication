@@ -2,7 +2,7 @@
 
 namespace OddawanieGlosow.Logic.Queries
 {
-    public class StaffQueries
+    public class UsersPresenceQueries
     {
         public bool HasUserAlreadyParticipated(string pesel, int pollId)
         {
